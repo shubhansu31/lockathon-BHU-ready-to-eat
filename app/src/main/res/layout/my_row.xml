@@ -60,6 +60,9 @@
         android:textColor="@android:color/white"
         android:background="@android:color/holo_green_light"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

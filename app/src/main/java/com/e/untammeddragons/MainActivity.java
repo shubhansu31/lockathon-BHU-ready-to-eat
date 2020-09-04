@@ -8,7 +8,9 @@ import android.os.Handler;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
+/*
+        Splash screen for  look and monitor if the user is logged in or not
+*/
 public class MainActivity extends AppCompatActivity {
 
     private int TIME_OUT = 2500;

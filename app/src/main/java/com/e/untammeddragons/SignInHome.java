@@ -15,11 +15,13 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-
+/*
+* User Sign in page sign in using firebase with email and passwork
+* */
 public class SignInHome extends AppCompatActivity {
 
-    private String email , password;
-    TextView inemail , inpassword;
+    private String email , password; // String to store email and password
+    TextView inemail , inpassword; 
     Button signin , signup;
     private FirebaseAuth mAuth;
     @Override

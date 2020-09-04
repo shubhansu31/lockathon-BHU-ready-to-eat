@@ -90,6 +90,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                     view.getContext().startActivity(intent);
                 }
             });
+            btnAdd.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    MenuItems current = (MenuItems) containerView.getTag();
+                    Intent intent = new Intent(view.getContext(), CartMain.class);
+                    intent.putExtra("name", current.getItemName());
+                    intent.putExtra("price", current.getPrice());
+                }
+            });
         }
     }
 
