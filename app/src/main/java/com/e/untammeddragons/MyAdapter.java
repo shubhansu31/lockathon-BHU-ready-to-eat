@@ -97,6 +97,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                     Intent intent = new Intent(view.getContext(), CartMain.class);
                     intent.putExtra("name", current.getItemName());
                     intent.putExtra("price", current.getPrice());
+
+                    view.getContext().startActivity(intent);
                 }
             });
         }

@@ -2,7 +2,9 @@ package com.e.untammeddragons;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -30,5 +32,12 @@ public class ItemActivity extends AppCompatActivity {
         itemTextView.setText(itemName);
         priceTextView.setText(String.format("%d/-", price));
         imageView.setImageResource(image);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ItemActivity.this, CartMain.class);
+            }
+        });
     }
 }

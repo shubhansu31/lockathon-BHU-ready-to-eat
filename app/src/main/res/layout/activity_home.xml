@@ -1,105 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer"
-    android:background="@color/colorPrimaryDark"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".Home">
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation"
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerHome"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:headerLayout="@layout/headofdrawer"
-        app:itemTextColor="@color/colorPrimaryDark"
-        android:background="#EAE2E2"
-        app:menu="@menu/drawermenu"
-        android:layout_gravity="start"
-        >
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
-    </com.google.android.material.navigation.NavigationView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/canteen"
-        android:background="#ffffff"
-        android:alpha="1"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="200sp"
-            android:orientation="horizontal"
-            android:background="@drawable/rectangleshadow"
-            android:id="@+id/canteens">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="198dp"
-                android:layout_height="174dp"
-                android:fontFamily="sans-serif-black"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:text="COLLEGE CANTEEN"
-                android:textSize="40sp" />
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="174dp"
-                android:layout_height="172dp"
-                app:srcCompat="@drawable/canteenbg" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="200sp"
-            android:orientation="horizontal"
-            android:background="@drawable/rectangleshadow"
-            android:id="@+id/canteens1">
-
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="198dp"
-                android:layout_height="174dp"
-                android:textColor="#ffffff"
-                android:fontFamily="sans-serif-black"
-                android:gravity="center"
-                android:text="COLLEGE CANTEEN"
-                android:textSize="40sp" />
-
-            <ImageView
-                android:id="@+id/imageView41"
-                android:layout_width="174dp"
-                android:layout_height="172dp"
-                app:srcCompat="@drawable/canteenbg" />
-        </LinearLayout>
-
-        <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200sp"
-        android:orientation="horizontal"
-        android:background="@drawable/rectangleshadow"
-        android:id="@+id/canteens2">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="198dp"
-            android:layout_height="174dp"
-            android:fontFamily="sans-serif-black"
-            android:textColor="#ffffff"
-            android:gravity="center"
-            android:text="COLLEGE CANTEEN"
-            android:textSize="40sp" />
-
-        <ImageView
-            android:id="@+id/imageView42"
-            android:layout_width="174dp"
-            android:layout_height="172dp"
-            app:srcCompat="@drawable/canteenbg" />
-        </LinearLayout>
-    </LinearLayout>
-
-</androidx.drawerlayout.widget.DrawerLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

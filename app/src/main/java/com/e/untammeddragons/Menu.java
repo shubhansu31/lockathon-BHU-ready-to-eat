@@ -22,18 +22,14 @@ public class Menu extends AppCompatActivity {
     RecyclerView recyclerView;
     MyAdapter myAdapter;
 
-    List<String> itemList;
-    List<Integer> priceList;
-    List<Integer> imageList;
+//    List<String> itemList;
+//    List<Integer> priceList;
+//    List<Integer> imageList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
-        itemList = new ArrayList<>();
-        priceList = new ArrayList<>();
-        imageList = new ArrayList<>();
 
         recyclerView = findViewById(R.id.recyclerView);
         myAdapter = new MyAdapter();
@@ -41,6 +37,16 @@ public class Menu extends AppCompatActivity {
 //        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         recyclerView.setAdapter(myAdapter);
+
+        foodcart = (ImageView) findViewById(R.id.foodcart);
+        this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setCustomView(R.layout.activity_my_action_bar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+//        itemList = new ArrayList<>();
+//        priceList = new ArrayList<>();
+//        imageList = new ArrayList<>();
 
 //        itemList.add("Aloo-Paratha");
 //        itemList.add("Burger");
@@ -76,11 +82,7 @@ public class Menu extends AppCompatActivity {
 //        imageList.add(R.drawable.tea);
 
 
-        foodcart = (ImageView) findViewById(R.id.foodcart);
-        this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setDisplayShowCustomEnabled(true);
-        getSupportActionBar().setCustomView(R.layout.activity_my_action_bar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
     public void foodClick(View view){

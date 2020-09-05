@@ -15,6 +15,7 @@ public class CartMain extends AppCompatActivity {
         item = (TextView)findViewById(R.id.carttext);
         item_value = (TextView)findViewById(R.id.cartvalue);
         total_value = (TextView)findViewById(R.id.cartvaluetotal);
+
         String itemName = getIntent().getStringExtra("name");
         int price = getIntent().getIntExtra("price", 0);
 
